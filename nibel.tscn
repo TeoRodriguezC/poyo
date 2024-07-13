@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://7qo3a0s7rctw"]
+
+[ext_resource type="PackedScene" uid="uid://b2tgd7eoknerk" path="res://arbolo.tscn" id="1_s8brp"]
+[ext_resource type="PackedScene" uid="uid://cov2yjk0xyac3" path="res://poyo.tscn" id="2_cfdev"]
+
+[node name="NIBEL" type="Node2D"]
+
+[node name="ARBOLO" parent="." instance=ExtResource("1_s8brp")]
+position = Vector2(-13, 62)
+
+[node name="POYO" parent="." instance=ExtResource("2_cfdev")]
+position = Vector2(12, -32)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="ARBOLO2" parent="." instance=ExtResource("1_s8brp")]
+position = Vector2(-86, -45)
+
+[node name="ARBOLO3" parent="." instance=ExtResource("1_s8brp")]
+position = Vector2(267, -132)
+scale = Vector2(-1, 1)

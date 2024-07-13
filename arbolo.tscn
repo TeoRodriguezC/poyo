@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2tgd7eoknerk"]
+
+[ext_resource type="Texture2D" uid="uid://c6re0hi3scf2r" path="res://arbolo.png" id="1_54ckb"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_8n2o5"]
+a = Vector2(-43, 0)
+b = Vector2(111, 0)
+
+[node name="ARBOLO" type="StaticBody2D"]
+
+[node name="Arbolo" type="Sprite2D" parent="."]
+position = Vector2(63, 50)
+scale = Vector2(0.218145, 0.218145)
+texture = ExtResource("1_54ckb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_8n2o5")
