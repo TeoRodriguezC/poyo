@@ -14,7 +14,6 @@ position = Vector2(-13, 62)
 position = Vector2(12, -32)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-script = ExtResource("3_tvbox")
 
 [node name="ARBOLO2" parent="." instance=ExtResource("1_s8brp")]
 position = Vector2(-86, -45)
