@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://6jntn27hygak"]
+
+[ext_resource type="Script" path="res://ramola.gd" id="1_4g6jn"]
+[ext_resource type="Texture2D" uid="uid://byqs557d5mb" path="res://ramola.png" id="1_y66ca"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_n24p3"]
+b = Vector2(218, 0)
+
+[node name="RAMOLA" type="StaticBody2D"]
+script = ExtResource("1_4g6jn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -13)
+shape = SubResource("SegmentShape2D_n24p3")
+
+[node name="Ramola" type="Sprite2D" parent="."]
+position = Vector2(118, -18)
+scale = Vector2(0.222222, 0.222222)
+texture = ExtResource("1_y66ca")

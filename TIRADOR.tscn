@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2vm8nhni5dut"]
+
+[ext_resource type="Script" path="res://tirarsib.gd" id="1_b7fgj"]
+
+[node name="tirarsib" type="Node2D"]
+position = Vector2(0, -647)
+script = ExtResource("1_b7fgj")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true

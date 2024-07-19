@@ -1,31 +1,35 @@
-[gd_scene load_steps=5 format=3 uid="uid://7qo3a0s7rctw"]
+[gd_scene load_steps=6 format=3 uid="uid://7qo3a0s7rctw"]
 
 [ext_resource type="PackedScene" uid="uid://b2tgd7eoknerk" path="res://arbolo.tscn" id="1_s8brp"]
 [ext_resource type="PackedScene" uid="uid://cov2yjk0xyac3" path="res://poyo.tscn" id="2_cfdev"]
+[ext_resource type="PackedScene" uid="uid://b2vm8nhni5dut" path="res://TIRADOR.tscn" id="3_76ypa"]
 [ext_resource type="PackedScene" uid="uid://87lpwkdidpq0" path="res://sib.tscn" id="3_cmojp"]
-[ext_resource type="Script" path="res://tirarsib.gd" id="3_tvbox"]
+[ext_resource type="PackedScene" uid="uid://6jntn27hygak" path="res://ramola.tscn" id="5_scucw"]
 
 [node name="NIBEL" type="Node2D"]
 
 [node name="ARBOLO" parent="." instance=ExtResource("1_s8brp")]
-position = Vector2(-13, 62)
+position = Vector2(-261, 382)
 
 [node name="POYO" parent="." instance=ExtResource("2_cfdev")]
 position = Vector2(12, -32)
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="POYO"]
+position = Vector2(-12, 32)
 
 [node name="ARBOLO2" parent="." instance=ExtResource("1_s8brp")]
-position = Vector2(-86, -45)
+position = Vector2(-271, 10)
 
 [node name="ARBOLO3" parent="." instance=ExtResource("1_s8brp")]
-position = Vector2(244, -166)
+position = Vector2(259, 196)
 scale = Vector2(-1, 1)
 
-[node name="tirarsib" type="Node2D" parent="."]
-position = Vector2(0, -647)
-script = ExtResource("3_tvbox")
-semilla = ExtResource("3_cmojp")
+[node name="tirarsib" parent="." instance=ExtResource("3_76ypa")]
+OCJETO = ExtResource("3_cmojp")
 
-[node name="Timer" type="Timer" parent="tirarsib"]
-autostart = true
+[node name="tirarsib2" parent="." instance=ExtResource("3_76ypa")]
+OCJETO = ExtResource("5_scucw")
+
+[node name="RAMOLA" parent="." instance=ExtResource("5_scucw")]
+position = Vector2(-180, 221)
+velocidatsib = 1
