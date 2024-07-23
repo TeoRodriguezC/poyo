@@ -2,6 +2,7 @@ extends CharacterBody2D  #include como las librerias de ardoinio, el berdecito e
 @onready var popoyo = $popoyo
 @onready var collision_shape_2d = $CollisionShape2D
 @onready var area_2d : Area2D = $Area2D
+@onready var visible_on_screen_notifier_2d = $VisibleOnScreenNotifier2D
 
 @export var valorcomida = 15
 var grabedat = 10
@@ -10,10 +11,12 @@ var saltovelos = 400
 
 func _ready(): 
 	area_2d.area_entered.connect (tragasion)
-
+	visible_on_screen_notifier_2d.screen_exited.connect (saliodepantalla)
 func tragasion (area):
 	saltovelos = saltovelos - valorcomida
 	area.queue_free()
+func saliodepantalla ():
+	position.x = position.x * -1
 
 func _physics_process(delta):
 	velocity.y += grabedat
