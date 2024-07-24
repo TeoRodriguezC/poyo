@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqskgaksmyq15"]
+
+[ext_resource type="Texture2D" uid="uid://s0y5fb38lqhy" path="res://troncolo.png" id="1_qhpj7"]
+
+[node name="paret" type="Node2D"]
+
+[node name="Troncolo" type="Sprite2D" parent="."]
+position = Vector2(212.376, -162)
+scale = Vector2(0.330275, 0.330275)
+texture = ExtResource("1_qhpj7")
+
+[node name="Troncolo3" type="Sprite2D" parent="."]
+position = Vector2(212.376, -484)
+scale = Vector2(0.330275, 0.330275)
+texture = ExtResource("1_qhpj7")
+flip_v = true

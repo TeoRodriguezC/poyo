@@ -1,12 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://7qo3a0s7rctw"]
+[gd_scene load_steps=10 format=3 uid="uid://7qo3a0s7rctw"]
 
 [ext_resource type="Script" path="res://Camera2D.gd" id="1_33jlh"]
-[ext_resource type="PackedScene" uid="uid://b2tgd7eoknerk" path="res://arbolo.tscn" id="1_s8brp"]
 [ext_resource type="PackedScene" uid="uid://cov2yjk0xyac3" path="res://poyo.tscn" id="2_cfdev"]
 [ext_resource type="PackedScene" uid="uid://b2vm8nhni5dut" path="res://TIRADOR.tscn" id="3_76ypa"]
 [ext_resource type="PackedScene" uid="uid://87lpwkdidpq0" path="res://sib.tscn" id="3_cmojp"]
 [ext_resource type="PackedScene" uid="uid://6jntn27hygak" path="res://ramola.tscn" id="5_scucw"]
 [ext_resource type="Texture2D" uid="uid://cpm4e0psypqbp" path="res://pastovo.png" id="7_twuig"]
+[ext_resource type="PackedScene" uid="uid://cqskgaksmyq15" path="res://paret.tscn" id="8_j1umw"]
+[ext_resource type="Script" path="res://checa los puntos si me muero y esas cosas.gd" id="8_wbvri"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s8ahd"]
 size = Vector2(6987.34, 273.883)
@@ -16,29 +17,15 @@ size = Vector2(6987.34, 273.883)
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("1_33jlh")
 
-[node name="ARBOLO" parent="." instance=ExtResource("1_s8brp")]
-position = Vector2(-261, 382)
-
 [node name="POYO" parent="." groups=["poyojuegador"] instance=ExtResource("2_cfdev")]
 z_index = 100
 position = Vector2(12, -32)
-
-[node name="ARBOLO2" parent="." instance=ExtResource("1_s8brp")]
-position = Vector2(-271, 10)
-
-[node name="ARBOLO3" parent="." instance=ExtResource("1_s8brp")]
-position = Vector2(259, 196)
-scale = Vector2(-1, 1)
 
 [node name="tirarsib" parent="." instance=ExtResource("3_76ypa")]
 OCJETO = ExtResource("3_cmojp")
 
 [node name="tirarsib2" parent="." instance=ExtResource("3_76ypa")]
 OCJETO = ExtResource("5_scucw")
-
-[node name="RAMOLA" parent="." instance=ExtResource("5_scucw")]
-position = Vector2(-180, 221)
-velocidatsib = 1
 
 [node name="Pastovo" type="Sprite2D" parent="."]
 position = Vector2(1, -205)
@@ -49,7 +36,6 @@ texture = ExtResource("7_twuig")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pastovo/StaticBody2D"]
 position = Vector2(-10.4166, 2258.84)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_s8ahd")
 
 [node name="ColorRect" type="ColorRect" parent="Pastovo"]
@@ -59,9 +45,9 @@ anchor_top = 1.164
 anchor_right = 0.5
 anchor_bottom = 1.164
 offset_left = -7012.0
-offset_top = -3325.6
+offset_top = -3399.6
 offset_right = -3.0
-offset_bottom = 6216.4
+offset_bottom = 6163.4
 color = Color(0.505882, 0.776471, 0.282353, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="Pastovo"]
@@ -71,3 +57,13 @@ offset_top = -4043.0
 offset_right = 3515.0
 offset_bottom = 2164.0
 color = Color(0.460258, 0.74641, 0.783183, 1)
+
+[node name="checa los puntos si me muero y esas cosas" type="Node" parent="."]
+script = ExtResource("8_wbvri")
+
+[node name="paret" parent="." instance=ExtResource("8_j1umw")]
+position = Vector2(-340, 0)
+
+[node name="paret2" parent="." instance=ExtResource("8_j1umw")]
+position = Vector2(340, 0)
+scale = Vector2(-1, 1)
